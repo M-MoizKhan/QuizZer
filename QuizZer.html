@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="ind.css" rel="stylesheet" />
+    <script>
+            let que = ["5 + 4 = ?", "4 * 2 = ?", "9 - 3 = ?", "8 / 2 = ?", "(2+5)-2 = ?"];
+            let uans = [prompt("What's You Name: "),+prompt("5 + 4 = ?"),+prompt("4 * 2 = ?"),+prompt("9 - 3 = ?"),+prompt("8 / 2 = ?"),+prompt("(2+5)-2 = ?")];
+            let ans = [9,8,6,4,5];
+            let com,per;
+            let t = 0;
+            document.write("<h1 align ='center'>" + "QuizZer" + "</h1>");
+            document.write("<table cellpadding = '10' cellspacing = '3' align ='center' border = '1'> <tr class = 'ac'> <th colspan = '4'>" + "<h3>" + "SCORE BOARD" + "</h3>" + "</th> </tr>");
+            document.write("<tr class = 'ab'> <th colspan = '4' align = 'left'>" + "Name: " + uans[0] + "</th> </tr>");
+            document.write("<tr class = 'ac'> <th width = '25%'>" + "Questions" + "</th>" + "<th width = '25%'>" + "Your Answers" + "</th>" + "<th width = '25%'>" + "Correct Answers" + "</th>" +  "<th width = '25%'>" + "Comments" + "</th>" + "</th> </tr>");
+            function comm(x,y){
+                if(uans[x] === ans[y]){
+                com = "Correct", t++;
+            }else
+            {
+                com = "Wrong"
+            };    
+            }
+            const doc = (x, y, z) => {
+            document.write("<tr class = 'ab'> <td>" + que[x] + "</td>" + "<td>" + uans[y] + "</td>" + "<td>" + ans[z] + "</td>" + "<td>" + com + "</td>" + "</tr>");
+            }
+            comm(1,0);
+            doc(0,1,0);
+            comm(2,1);
+            doc(1,2,1);
+            comm(3,2);
+            doc(2,3,2);
+            comm(4,3);
+            doc(3,4,3);
+            comm(5,4);
+            doc(4,5,4);
+
+            per = t/5 * 100;
+            document.write("<tr class = 'ac'> <th colspan = '4'>" + "Score: " + per + "%" + "</th>" + "</tr> </table> </div>");
+            
+    </script>
+</head>
+<body>
+    <h1> New </h1>
+</body>
+</html>
